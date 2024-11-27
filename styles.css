@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --border-radius: 12px;
+
+  --font-color: #323232;
+  
+  --secondary-color: black;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+ background-color: #E5E1DA;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-3);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+#logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #323232; 
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.navigation-items {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-2);
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-4) 0;
+}
+
+.about-text {
+  margin-left: var(--spacing-3);
+}
+
+.portrait {
+  width: 300px;
+  border-radius: 200px;
+  box-shadow: 0px -25px 20px -20px rgba(85, 85, 85, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(106, 104, 104, 0.45);
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.service {
+  flex: 1;
+  min-width: 250px;
+  color: black;
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  background-color: rgba(85, 85, 85, 0.30);
+  text-align: center;
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+h2 {
+    text-align: center; 
+}
+
+#contact {
+  text-align: center;
+}
+
+.contact-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+}
+
+footer {
+  text-align: center;
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-2);
+  background-color:  rgba(85, 85, 85, 0.30);
+  color: black;
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigation-items {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    background-color: var(--primary-color);
+    padding: var(--spacing-3);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+  }
+
+  .navigation-items.active {
+    display: flex;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin: 0;
+  }
+}
