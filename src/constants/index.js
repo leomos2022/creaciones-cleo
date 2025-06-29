@@ -1,21 +1,21 @@
-import hero from "../assets/hero.webp";
-import kitchenImage from "../assets/kitchen.webp";
-import bathroomImage from "../assets/bathroom.webp";
-import livingRoomImage from "../assets/living-room.webp";
+import hero from "../assets/images/hero/hero.webp";
+import kitchenImage from "../assets/images/services/kitchen.webp";
+import bathroomImage from "../assets/images/services/bathroom.webp";
+import livingRoomImage from "../assets/images/services/living-room.webp";
 
-import portfolio1 from "../assets/portfolio1.webp";
-import portfolio2 from "../assets/portfolio2.webp";
-import portfolio3 from "../assets/portfolio3.webp";
-import portfolio4 from "../assets/portfolio4.webp";
-import portfolio5 from "../assets/portfolio5.webp";
-import portfolio6 from "../assets/portfolio6.webp";
+import portfolio1 from "../assets/images/portfolio/portfolio1.webp";
+import portfolio2 from "../assets/images/portfolio/portfolio2.webp";
+import portfolio3 from "../assets/images/portfolio/portfolio3.webp";
+import portfolio4 from "../assets/images/portfolio/portfolio4.webp";
+import portfolio5 from "../assets/images/portfolio/portfolio5.webp";
+import portfolio6 from "../assets/images/portfolio/portfolio6.webp";
 
-import user1 from "../assets/user1.webp";
-import user2 from "../assets/user2.webp";
-import user3 from "../assets/user3.webp";
-import user4 from "../assets/user4.webp";
-import user5 from "../assets/user5.webp";
-import user6 from "../assets/user6.webp";
+import user1 from "../assets/images/reviews/user1.webp";
+import user2 from "../assets/images/reviews/user2.webp";
+import user3 from "../assets/images/reviews/user3.webp";
+import user4 from "../assets/images/reviews/user4.webp";
+import user5 from "../assets/images/reviews/user5.webp";
+import user6 from "../assets/images/reviews/user6.webp";
 
 export const LINKS = [
   {
