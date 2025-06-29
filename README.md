@@ -2,6 +2,8 @@
 
 Sitio web profesional para servicios de costura y arreglos de ropa de Cleo Rodríguez.
 
+**🚀 Última actualización:** Enero 2025
+
 ## 📋 Características
 
 - ✨ Diseño moderno y responsivo
@@ -49,12 +51,14 @@ CLEOWEBSITE/
 ### Pasos de Instalación
 
 1. **Clonar el repositorio**
+
    ```bash
    git clone https://github.com/tu-usuario/creaciones-cleo.git
    cd creaciones-cleo
    ```
 
 2. **Instalar dependencias**
+
    ```bash
    npm install
    # o
@@ -62,6 +66,7 @@ CLEOWEBSITE/
    ```
 
 3. **Ejecutar en modo desarrollo**
+
    ```bash
    npm run dev
    # o
@@ -78,6 +83,7 @@ CLEOWEBSITE/
 ### Configuración Recomendada
 
 1. **Instalar extensiones útiles:**
+
    - **ES7+ React/Redux/React-Native snippets**
    - **Tailwind CSS IntelliSense**
    - **Prettier - Code formatter**
@@ -117,6 +123,7 @@ npm run lint         # Ejecutar ESLint
 ### Agregar Nuevas Imágenes
 
 1. Coloca las imágenes en la carpeta correspondiente:
+
    - `src/assets/images/hero/` - Para imágenes principales
    - `src/assets/images/services/` - Para servicios
    - `src/assets/images/portfolio/` - Para portafolio
@@ -134,29 +141,29 @@ npm run lint         # Ejecutar ESLint
 
    ```yaml
    name: Deploy to GitHub Pages
-   
+
    on:
      push:
-       branches: [ main ]
-   
+       branches: [main]
+
    jobs:
      build-and-deploy:
        runs-on: ubuntu-latest
        steps:
          - uses: actions/checkout@v3
-         
+
          - name: Setup Node.js
            uses: actions/setup-node@v3
            with:
-             node-version: '18'
-             cache: 'npm'
-         
+             node-version: "18"
+             cache: "npm"
+
          - name: Install dependencies
            run: npm ci
-         
+
          - name: Build
            run: npm run build
-         
+
          - name: Deploy to GitHub Pages
            uses: peaceiris/actions-gh-pages@v3
            with:
@@ -173,11 +180,13 @@ npm run lint         # Ejecutar ESLint
 ### Método 2: Despliegue Manual
 
 1. **Construir el proyecto:**
+
    ```bash
    npm run build
    ```
 
 2. **Subir a GitHub:**
+
    ```bash
    git add .
    git commit -m "Build for production"
@@ -195,16 +204,16 @@ npm run lint         # Ejecutar ESLint
 Edita `vite.config.js`:
 
 ```javascript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/creaciones-cleo/', // Cambia por tu nombre de repositorio
+  base: "/creaciones-cleo/", // Cambia por tu nombre de repositorio
   build: {
-    outDir: 'dist',
-  }
-})
+    outDir: "dist",
+  },
+});
 ```
 
 ## 📧 Configuración del Formulario de Contacto
@@ -212,28 +221,30 @@ export default defineConfig({
 El formulario actualmente simula el envío. Para hacerlo funcional:
 
 1. **Usar un servicio de formularios:**
+
    - [Formspree](https://formspree.io/)
    - [Netlify Forms](https://docs.netlify.com/forms/setup/)
    - [EmailJS](https://www.emailjs.com/)
 
 2. **Ejemplo con EmailJS:**
+
    ```javascript
-   import emailjs from '@emailjs/browser';
-   
+   import emailjs from "@emailjs/browser";
+
    const handleSubmit = async (e) => {
      e.preventDefault();
      setIsSubmitting(true);
-     
+
      try {
        await emailjs.sendForm(
-         'YOUR_SERVICE_ID',
-         'YOUR_TEMPLATE_ID',
+         "YOUR_SERVICE_ID",
+         "YOUR_TEMPLATE_ID",
          e.target,
-         'YOUR_PUBLIC_KEY'
+         "YOUR_PUBLIC_KEY"
        );
-       setSubmitStatus('success');
+       setSubmitStatus("success");
      } catch (error) {
-       setSubmitStatus('error');
+       setSubmitStatus("error");
      } finally {
        setIsSubmitting(false);
      }
@@ -250,6 +261,7 @@ El formulario actualmente simula el envío. Para hacerlo funcional:
 ## 📞 Soporte
 
 Para soporte técnico o consultas sobre el proyecto:
+
 - 📧 Email: tu-email@ejemplo.com
 - 💬 WhatsApp: +57 300-4039937
 
